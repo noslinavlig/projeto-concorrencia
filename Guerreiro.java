@@ -24,6 +24,13 @@ public class Guerreiro {
 		return this.nome;
 	}
 
+    public boolean isAlive(){
+        if(this.getVida() == 0)
+        return false;
+        else
+        return true;
+    }
+
 	public boolean ataca(Guerreiro adversario){
 		if (this.getAtaque() >= adversario.getVida()){
 			System.out.println("ATAQUE!!!\n" + this.getNome() + " desfere um golpe de " + adversario.getVida() + " de dano em " + adversario.getNome());
