@@ -16,5 +16,7 @@ public class Luta implements Runnable{
            guerreiro2.ataca(guerreiro1);
         }while(guerreiro1.isAlive() && guerreiro2.isAlive());
     }
-   }
+
+   
+}
    
