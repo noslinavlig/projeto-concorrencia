@@ -1,20 +1,20 @@
-public class Luta {
+public class Luta implements Runnable{
   
-    private Guerreiro w1;
-    private Guerreiro w2;
+    private Guerreiro guerreiro1;
+    private Guerreiro guerreiro2;
    
     public Luta(Guerreiro warrior1, Guerreiro warrior2){
-       this.w1 = warrior1;
-       this.w2 = warrior2;
+       this.guerreiro1 = warrior1;
+       this.guerreiro2 = warrior2;
     }
     
-    public void batalha(){
-           System.out.println("\nInicio:\n" + w1.getNome() + "\t\t" + w2.getNome() + "\nVida: " + w1.getVida() + "\tVida: " + w2.getVida() + "\n");
+    public void run(){
+        System.out.println("\nInicio:\n" + guerreiro1.getNome() + "\t\t" + guerreiro2.getNome() + "\nVida: " + guerreiro1.getVida() + "\tVida: " + guerreiro2.getVida() + "\n");
          
-          do{
-           w1.ataca(w2);
-           w2.ataca(w1);
-          } while(w1.isAlive() && w2.isAlive());
+        do{
+           guerreiro1.ataca(guerreiro2);
+           guerreiro2.ataca(guerreiro1);
+        }while(guerreiro1.isAlive() && guerreiro2.isAlive());
     }
    }
    
